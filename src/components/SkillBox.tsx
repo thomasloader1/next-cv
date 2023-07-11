@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import ItemList from "./ItemList";
 
 interface SkillBoxProps {
   soft: string[];
@@ -7,22 +8,12 @@ interface SkillBoxProps {
 
 const SkillBox: FC<SkillBoxProps> = ({ soft, hard }) => {
   return (
-    <div className="bg-orange_custom rounded-custom p-3 flex flex-col ">
-      <h2 className="text-white font-outfit text-2xl">Skills</h2>
-
-      <h3>Soft</h3>
-      <ul>
-        {soft.map((s, i) => (
-          <li key={`${i}_${s}`}>{s}</li>
-        ))}
-      </ul>
-
-      <h3>Hard</h3>
-      <ul>
-        {hard.map((h, i) => (
-          <li key={`${i}_${h}`}>{h}</li>
-        ))}
-      </ul>
+    <div className="bg-gradient_orange rounded-custom p-14 flex flex-col justify-between">
+      <h2 className="font-outfit text-5xl font-outfit my-3 mb-12">Skills</h2>
+      <div className="flex-1  flex flex-col justify-between">
+        <ItemList title="Soft" items={soft} />
+        <ItemList title="Hard" items={hard} />
+      </div>
     </div>
   );
 };

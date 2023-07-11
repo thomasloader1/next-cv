@@ -1,11 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import imageProfile from "../../public/profile.png";
+import imageProfile from "../../public/profile.jpg";
 
 export const ImageBox = (): JSX.Element => {
   return (
-    <div className="rectangulo-de-foto p-3">
-      <Image src={imageProfile} alt="Imagen de perfil" />
+    <div className="flex items-center mr-2">
+      <Image
+        src={imageProfile}
+        alt="Imagen de perfil"
+        className="rounded-custom"
+      />
     </div>
   );
 };

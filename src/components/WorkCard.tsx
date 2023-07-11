@@ -14,11 +14,11 @@ const WorkCard: FC<WorkCardProps> = ({
   description,
 }) => {
   return (
-    <div className="bg-white rounded-custom flex flex-col">
-      <div className="flex items-center  bg-orange_custom rounded-card_work_pill">
-        <div className="bg-dark_custom flex-1 text-white p-4 rounded-card_work">
-          {role} <span>@</span> {company}
-        </div>
+    <div className="bg-white rounded-custom flex flex-col drop-shadow-lg">
+      <div className="flex items-center  bg-gradient_orange rounded-card_work_pill">
+        <h2 className="text-2xl bg-dark_custom flex-1 text-white p-4 rounded-card_work">
+          {role} <span className="font-outfit">@</span> {company}
+        </h2>
 
         <div className="text-center">
           {timeActivity.split("-").map((text, i) => (
@@ -28,7 +28,9 @@ const WorkCard: FC<WorkCardProps> = ({
           ))}
         </div>
       </div>
-      <div className="my-3 px-3 font-poppins font-normal">{description}</div>
+      <div className="my-3 px-5 font-poppins font-normal text-md">
+        {description}
+      </div>
     </div>
   );
 };

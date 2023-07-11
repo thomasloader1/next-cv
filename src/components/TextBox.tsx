@@ -7,9 +7,13 @@ interface TextBoxProps {
 
 const TextBox: FC<TextBoxProps> = ({ title, text }) => {
   return (
-    <div className="bg-grey_custom rounded-custom p-3 flex flex-col ">
-      <h1 className="text-white font-outfit text-4xl">{title}</h1>
-      <h2 className="text-white font-poppins">{text}</h2>
+    <div className="bg-beta rounded-custom p-5 flex flex-col justify-center ">
+      <h1 className="text-white font-outfit text-5xl mb-4 drop-shadow-md">
+        {title}
+      </h1>
+      <h2 className="text-white font-poppins font-normal text-4xl drop-shadow-md">
+        {text}
+      </h2>
     </div>
   );
 };
