@@ -8,11 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'orange_custom': '#ff9700',
+        'orange_custom': '#F29727',
         'grey_custom': '#A5A5A5',
-        'dark_custom': '#3D3F42',
-        'gradient_orange_start': '#FF9A03',
-        'gradient_orange_end': '#ff9700',
+        'dark_custom': '#191A19',
+        'gradient_orange_start': '#F29727',
+        'gradient_orange_end': '#F29727',
       },
       'borderRadius': {
         custom: '13px',
@@ -25,10 +25,13 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'gradient_orange': 'linear-gradient(160deg, #ffb300 0%, #ff9700 30%, #ffad37 100%)',
+        'gradient_orange': ' radial-gradient(circle at 73.7% 100.82%, #f57638 0, #f57638 25%, #f57638 50%, #f57638 75%, #f57638 100%)',
 
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animated')
+  ],
 }
+//'linear-gradient(190deg, #F7803C 0%, #F29727 100%)'

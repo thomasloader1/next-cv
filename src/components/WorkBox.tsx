@@ -33,7 +33,7 @@ const workExperiencie = [
 
 export const WorkBox = (): JSX.Element => {
   return (
-    <div className="bg-beta rounded-custom p-14 flex flex-col gap-7">
+    <div className="bg-beta rounded-custom p-5 md:p-14 flex flex-col gap-7">
       <h2 className="text-white text-5xl my-5 drop-shadow-md">
         Experiencia Laboral
       </h2>

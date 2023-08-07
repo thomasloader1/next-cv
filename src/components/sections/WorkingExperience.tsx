@@ -18,7 +18,7 @@ const hard = [
 
 const WorkingExperience = () => {
   return (
-    <section className="grid gap-4 grid-cols-[_2fr_1fr]">
+    <section className="grid gap-4 grid-cols-1 xl:grid-cols-[_2fr_1fr] animate-fade-down animate-once animate-delay-1000">
       <WorkBox />
       <SkillBox soft={soft} hard={hard} />
     </section>

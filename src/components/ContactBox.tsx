@@ -1,28 +1,48 @@
-import Image from "next/image";
 import React from "react";
 import ghIcon from "../../public/icons/github.svg";
 import liIcon from "../../public/icons/linkedin.svg";
 import mailIcon from "../../public/icons/mail.svg";
 import phoneIcon from "../../public/icons/phone.svg";
-import { ImageBox } from "./ImageBox";
+import SocialItem from "./SocialItem";
+
+const items: Array<{ src: string; alt: string; title: string }> = [
+  {
+    src: ghIcon,
+    alt: "GitHub",
+    title: "thomasloader1",
+  },
+  {
+    src: liIcon,
+    alt: "LinkedIn",
+    title: "gomeztomasgonzalo",
+  },
+  {
+    src: mailIcon,
+    alt: "E-Mail",
+    title: "talk.gtg@gmail.com",
+  },
+  {
+    src: phoneIcon,
+    alt: "Telefono",
+    title: "+54 11 5501 1250",
+  },
+];
+
 export const ContactBox = (): JSX.Element => {
   return (
-    <div className="bg-gradient_orange rounded-custom p-4 gap-1 grid grid-cols-[_150px_50px_1fr] grid-rows-[150px]">
-      <ImageBox />
-
-      <div className="flex flex-col justify-around items-center">
-        <Image src={ghIcon} alt="GitHub" />
-        <Image src={liIcon} alt="GitHub" />
-        <Image src={mailIcon} alt="GitHub" />
-        <Image src={phoneIcon} alt="GitHub" />
-      </div>
-
-      <div className="flex flex-col justify-around ">
-        <h3 className="ml-2">thomasloader1</h3>
-        <h3 className="ml-2">gomeztomasgonzalo</h3>
-        <h3 className="ml-2">talk.gtg@gmail.com</h3>
-        <h3 className="ml-2">+54 11 5501 1250</h3>
-      </div>
+    <div
+      className={`
+          bg-gradient_orange rounded-custom p-4 font-poppins font-normal
+          
+          gap-5 grid grid-cols-1 
+          
+          lg:grid-rows-auto 
+          lg:text-2xl 
+          `}
+    >
+      {items.map((item, i) => (
+        <SocialItem key={i} {...item} />
+      ))}
     </div>
   );
 };

@@ -28,7 +28,7 @@ const EducationExperience = () => {
   ];
 
   return (
-    <section className="grid grid-cols-[_1fr_2fr] gap-5">
+    <section className="grid grid-cols-1 xl:grid-cols-[_1fr_2fr] gap-5">
       <CoursesBox courses={courses} />
       <EducationBox />
     </section>

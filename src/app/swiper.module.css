@@ -1,0 +1,45 @@
+/* Slider Container */
+.slider {
+  display: grid;
+  grid-template-areas: "slide slide" "next prev";
+  grid-template-rows: 1fr 300px;
+  gap: 1rem;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+/* Slides Container */
+.slidesContainer {
+  grid-area: slide;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Individual Slide */
+.slide {
+  min-width: 100%;
+}
+
+#next_slide {
+  grid-area: next;
+}
+
+#prev_slide {
+  grid-area: prev;
+}
+
+/* Navigation Buttons */
+.navButton {
+  cursor: pointer;
+  padding: 8px 12px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.navButton:hover {
+  background-color: #0056b3;
+}

@@ -18,12 +18,12 @@ import tsIcon from "../../../public/icons/typescript.svg";
 
 const StackTech = () => {
   return (
-    <section className="bg-beta p-14 rounded-custom text-white">
+    <section className="bg-beta p-5 md:p-14 rounded-custom text-white">
       <h2 className="font-outfit text-5xl mb-10 drop-shadow-md">
         Stack Tecnológico
       </h2>
 
-      <div className="flex justify-evenly my-14 drop-shadow-md">
+      <div className="flex gap-4 flex-wrap md:flex-nowrap justify-evenly my-14 drop-shadow-md">
         <Image src={pyIcon} alt="Python" title="Python" />
         <Image src={nodeIcon} alt="Node.js" title="Node.js" />
         <Image src={twIcon} alt="" />
@@ -32,7 +32,7 @@ const StackTech = () => {
         <Image src={jsIcon} alt="" />
         <Image src={phpIcon} alt="" />
       </div>
-      <div className="flex justify-evenly my-5 drop-shadow-lg">
+      <div className="flex gap-5 flex-wrap md:flex-nowrap justify-evenly my-5 drop-shadow-lg">
         <Image src={wpIcon} alt="" />
         <Image src={laravelIcon} alt="" />
         <Image src={reactIcon} alt="" />

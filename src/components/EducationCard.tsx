@@ -25,21 +25,23 @@ const EducationCard: FC<EducationCardProps> = ({
   return (
     <div className={componentCondition.bodyClass}>
       <div
-        className={`flex items-center  bg-gradient_orange ${
+        className={`flex items-stretch  bg-gradient_orange ${
           hasItems ? "rounded-card_education" : "rounded-custom"
         } `}
       >
-        <h3 className=" text-xl flex-1 text-white ml-4">
-          {role} <span>@</span> {company}
-        </h3>
+        <div className="flex-1 flex items-center">
+          <h3 className=" text-xl  text-dark font-outfit ml-4 my-3">
+            {role} <span className="font-outfit text-white">@</span> {company}
+          </h3>
+        </div>
 
         <div
-          className={`text-center bg-dark_custom ${
+          className={`text-center bg-dark_custom flex flex-col justify-center items-center ${
             hasItems ? "rounded-card_education_pill" : "rounded-custom"
-          }  p-1`}
+          } p-1`}
         >
           {timeActivity.split("-").map((text, i) => (
-            <p key={i} className="mx-3 text-white">
+            <p key={i} className="mx-3 text-white ">
               {text}
             </p>
           ))}

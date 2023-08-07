@@ -24,7 +24,7 @@ const educationExperiencie = [
 
 export const EducationBox = (): JSX.Element => {
   return (
-    <div className="bg-beta rounded-custom p-14 flex flex-col gap-5">
+    <div className="bg-beta rounded-custom p-5 md:p-14 flex flex-col gap-5">
       <h2 className="text-white text-5xl my-5 drop-shadow-md">
         Formación profesional
       </h2>

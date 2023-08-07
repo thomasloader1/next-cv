@@ -4,11 +4,13 @@ import imageProfile from "../../public/profile.jpg";
 
 export const ImageBox = (): JSX.Element => {
   return (
-    <div className="flex items-center mr-2">
+    <div className="flex justify-center items-center">
       <Image
         src={imageProfile}
         alt="Imagen de perfil"
-        className="rounded-custom"
+        className={`rounded-full 
+        h-32 w-32
+        `}
       />
     </div>
   );

@@ -16,7 +16,7 @@ const WorkCard: FC<WorkCardProps> = ({
   return (
     <div className="bg-white rounded-custom flex flex-col drop-shadow-lg">
       <div className="flex items-center  bg-gradient_orange rounded-card_work_pill">
-        <h2 className="text-2xl bg-dark_custom flex-1 text-white p-4 rounded-card_work">
+        <h2 className="text-3xl font-outfit bg-dark_custom flex-1 text-white p-4 rounded-card_work">
           {role} <span className="font-outfit">@</span> {company}
         </h2>
 
