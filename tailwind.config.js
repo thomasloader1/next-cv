@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        poppins: ['Poppins', 'sans-serif'],
+        outfit: ['Outfit', 'sans-serif'],
+      },
       colors: {
         'orange_custom': '#F29727',
         'grey_custom': '#A5A5A5',

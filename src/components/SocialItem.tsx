@@ -1,18 +1,17 @@
+import { SocialItems } from "@/data/Social";
 import Image from "next/image";
 import React, { FC } from "react";
 
-interface SocialItemProps {
-  src: string;
-  alt: string;
-  title: string;
-}
+const SocialItem: FC<SocialItems> = ({ src, alt, title, link, source, value }) => {
 
-const SocialItem: FC<SocialItemProps> = ({ src, alt, title }) => {
+  const mappingLink = source ? `${source}${value}` : link
+  const openInTab = !!value ? "" : "_blank"
+
   return (
-    <div className="flex justify-start items-center">
-      <Image src={src} alt={alt} className="" />
-      <p className="ml-4">{title}</p>
-    </div>
+    <a href={mappingLink} target={openInTab} className="flex justify-start items-center p-2 rounded-lg hover:bg-white">
+      <Image src={src} alt={alt} title={alt} />
+      <p className="ml-4 hidden md:block">{title}</p>
+    </a>
   );
 };
 
