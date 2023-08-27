@@ -1,8 +1,13 @@
+import { getReactIconItem } from "@/lib/getReactIconItem";
+import Link from "next/link";
 import React, { FC } from "react";
 
 interface WorkCardProps {
   role: string;
-  company: string;
+  company: {
+    name: string;
+    web: string;
+  };
   timeActivity: string;
   description: string;
   stack: string[];
@@ -15,11 +20,19 @@ const WorkCard: FC<WorkCardProps> = ({
   description,
   stack
 }) => {
+
+  const renderStack = (items: string[]) => {
+    const stackElementClasses = "ml-2 my-1 px-3 py-2 bg-dark_custom font-poppins font-normal text-sm rounded-lg"
+    return items.map((s: string, i: number) => (<span key={`${s}_${i}`} className={stackElementClasses} title={s}>{getReactIconItem(s,{color:'white', size:25})}</span>))
+  } 
+
   return (
     <div className="bg-white rounded-custom flex flex-col drop-shadow-lg">
       <div className="flex items-center  bg-gradient_orange rounded-card_work_pill">
         <h2 className="text-2xl font-outfit bg-dark_custom flex-1 text-white p-4 rounded-card_work">
-          {role} <span className="font-outfit">@</span> {company}
+          <span>{role}</span> 
+          <span className="font-outfit text-orange_custom mx-1">@</span> 
+          <Link href={company.web} target="_blank">{company.name}</Link>
         </h2>
 
         <div className="text-center">
@@ -34,7 +47,7 @@ const WorkCard: FC<WorkCardProps> = ({
         {description}
       </div>
       <div className="px-3 mb-4 flex flex-wrap text-white ">
-        {stack.map((s: string, i: number) => <span key={`${s}_${i}`} className="ml-2 my-1 px-2 py-1 bg-gradient_orange font-poppins font-normal text-sm rounded-lg">{s}</span>)}
+       {renderStack(stack)}
       </div>
     </div>
   );

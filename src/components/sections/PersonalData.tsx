@@ -16,7 +16,7 @@ const PersonalData = () => {
               animate-fade-down
               `}
     >
-      <ContactBox />
+      
       <TextBox {...personData} />
     </section>
   );
