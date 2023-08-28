@@ -1,3 +1,5 @@
+import { IconName } from "@/types";
+
 export const soft = [
     "Comunicacion y escucha activa",
     "Flexibilidad",
@@ -19,6 +21,17 @@ export const hard = [
     "Optimización Estratégica para Rendimiento",
     "Colaboración y Control de Versiones Efectivo",
   ];
+
+ export interface WorkCardProps {
+    role: string;
+    company: {
+      name: string;
+      web: string;
+    };
+    timeActivity: string;
+    description: string;
+    stack: IconName[];
+  }
 
   export const workExperiencie = [
     {

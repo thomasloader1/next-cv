@@ -13,7 +13,7 @@ export const ContactBox = (): JSX.Element => {
           flex flex-wrap items-center justify-around shadow-lg
           `}
     >
-      <MdSimCardDownload size={30} />
+      {/* <MdSimCardDownload size={30} className="hover:bg-white rounded-lg" /> */}
       {items.map((item, i) => (
         <SocialItem key={i} {...item} />
       ))}

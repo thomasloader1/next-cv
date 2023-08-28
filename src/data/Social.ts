@@ -1,5 +1,7 @@
+import { IconName } from "@/types";
+
 export interface SocialItems{
-    alt: string; 
+    alt: IconName; 
     title: string;
     link?: string;
     source?: string;

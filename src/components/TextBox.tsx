@@ -21,7 +21,7 @@ const TextBox: FC<TextBoxProps> = ({ title, text }) => {
           {title}
         </h1>
 
-        <h2 className="text-white font-outfit font-normal text-3xl md:text-4xl">
+        <h2 className="text-white font-poppins font-normal text-3xl md:text-5xl">
           {text}
         </h2>
       </div>
