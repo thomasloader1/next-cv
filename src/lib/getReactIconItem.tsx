@@ -13,7 +13,7 @@ interface IconOptions {
   hideText: boolean;
 }
 
-const iconComponents: Record<IconName, React.ElementType> = {
+const iconComponents: Record<string, React.ElementType> = {
   GitHub: FaGithubSquare,
   Telefono: IoMdPhonePortrait,
   'E-Mail': IoMdMail,
@@ -35,7 +35,7 @@ const iconComponents: Record<IconName, React.ElementType> = {
   SQLite: SiSqlite
 }
 
-export const getReactIconItem = (name: IconName, options: IconOptions = { color: '#191A19', size: 30, hideText: true }) => {
+export const getReactIconItem = (name: string, options: IconOptions = { color: '#191A19', size: 30, hideText: true }) => {
   const IconComponent = iconComponents[name];
 
   const Component = () => (

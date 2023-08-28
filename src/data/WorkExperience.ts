@@ -30,7 +30,7 @@ export const hard = [
     };
     timeActivity: string;
     description: string;
-    stack: IconName[];
+    stack: string[];
   }
 
   export const workExperiencie = [

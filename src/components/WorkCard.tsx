@@ -13,10 +13,10 @@ const WorkCard: FC<WorkCardProps> = ({
   stack
 }) => {
 
-  const renderStack = (items: IconName[]) => {
+  const renderStack = (items: string[]) => {
     const stackElementClasses = "ml-2 my-1 px-3 py-2 bg-dark_custom font-poppins font-normal text-sm rounded-lg animate-fade-right"
     const iconOptions = {color:'white', size:25, hideText: false};
-    const allIcons = items.map((s: IconName, i: number) => (
+    const allIcons = items.map((s: string, i: number) => (
       <span key={`${s}_${i}`} className={stackElementClasses} title={s}>
         { getReactIconItem(s, iconOptions) }
       </span>
