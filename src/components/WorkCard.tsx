@@ -29,7 +29,7 @@ const WorkCard: FC<WorkCardProps> = ({
   const [icons, setIcons] = useState(renderStack(stack).filter((v,i) => i < iconsLength))
 
   const handleResetStack = () => {
-    setIconsExpand(prevState => !prevState)
+    setIconsExpand(false)
     setIcons(renderStack(stack).filter((v,i) => i < 4))
   }
 
